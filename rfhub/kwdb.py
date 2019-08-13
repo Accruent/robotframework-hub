@@ -250,9 +250,7 @@ class KeywordTable(object):
         result = self.db.execute(insert)
         return result.inserted_primary_key[0]
 
-    def add_installed_libraries(self, extra_libs=("SeleniumLibrary",
-                                                  "SudsLibrary",
-                                                  "RequestsLibrary")):
+    def add_installed_libraries(self):
         """Add any installed libraries that we can find
 
         We do this by looking in the `libraries` folder where
@@ -274,19 +272,6 @@ class KeywordTable(object):
                     except Exception as e:
                         # need a better way to log this...
                         self.log.debug("unable to add library: " + str(e))
-
-        # I hate how I implemented this, but I don't think there's
-        # any way to find out which installed python packages are
-        # robot libraries.
-        for library in extra_libs:
-            if (library.lower() not in loaded and
-                    not self._should_ignore(library)):
-                try:
-                    self.add(library)
-                    loaded.append(library.lower())
-                except Exception as e:
-                    self.log.debug("unable to add external library %s: %s" % \
-                                   (library, str(e)))
 
     def get_collection(self, collection_id):
         """Get a specific collection"""
