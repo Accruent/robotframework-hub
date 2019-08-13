@@ -568,7 +568,7 @@ class KeywordTable(object):
         _name = name.lower()
         return (_name.startswith("deprecated") or
                 _name.startswith("_") or
-                _name in ("remote", "reserved",
+                _name in ("remote", "reserved", "Easter", 
                           "dialogs_py", "dialogs_ipy", "dialogs_jy"))
 
     def _add_keyword(self, collection_id, name, doc, args):
