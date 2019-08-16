@@ -1,24 +1,26 @@
 language: python
 python:
   - 3.6
-sudo: required
-dist: trusty
-addons:
-  chrome: stable
-services:
-  - postgresql
+#sudo: required
+#dist: trusty
+#addons:
+#  chrome: stable
+#services:
+#  - postgresql
 cache: pip
 install:
   - pip install -r requirements.txt -r requirements-postgres.txt
-before_script:
-  - psql -c 'create database hub_test;' -U postgres
-  - wget "http://chromedriver.storage.googleapis.com/2.46/chromedriver_linux64.zip"
-  - unzip chromedriver_linux64.zip
-  - sudo mv chromedriver /usr/local/bin
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
+#before_script:
+#  - psql -c 'create database hub_test;' -U postgres
+#  - wget "http://chromedriver.storage.googleapis.com/2.46/chromedriver_linux64.zip"
+#  - unzip chromedriver_linux64.zip
+#  - sudo mv chromedriver /usr/local/bin
+#  - "export DISPLAY=:99.0"
+#  - "sh -e /etc/init.d/xvfb start"
+#  - sleep 3 # give xvfb some time to start
 script:
-  - python -m unittest utests
-  - robot -A tests/conf/default.args tests
-  - robot -A tests/conf/postgres.args tests
+  - pytest --cov rfhub/ utests/KeywordTableTest.py -v --cov-config .coveragerc
+#  - robot -A tests/conf/default.args tests
+#  - robot -A tests/conf/postgres.args tests
+after_success:
+  - coveralls
