@@ -16,7 +16,7 @@
 *** Test Cases ***
 | Query with no ?fields parameter returns all expected fields
 | | [Setup] | Run keywords
-| | ... | Do a GET on | /api/keywords?pattern=none+shall+pass
+| | ... | Do a GET on | /api/keywords?pattern=Run+Keyword+If+All+Critical+Tests+Passed
 | | ... | AND | Get first returned keyword
 | | 
 | | :FOR | ${key} | IN | @{all data keys}
@@ -24,7 +24,7 @@
 
 | Query with explicit fields (?fields=name,synopsis)
 | | [Setup] | Run keywords
-| | ... | Do a GET on | /api/keywords?pattern=none+shall+pass&fields=name,synopsis
+| | ... | Do a GET on | /api/keywords?pattern=Run+Keyword+If+All+Critical+Tests+Passed&fields=name,synopsis
 | | ... | AND | Get first returned keyword
 | | 
 | | ${expected keys}= | create list | name | synopsis
