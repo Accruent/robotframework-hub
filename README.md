@@ -1,6 +1,7 @@
 # Robot Framework Hub
 
-[![Build Status](https://travis-ci.org/pbylicki/robotframework-hub.svg?branch=master)](https://travis-ci.org/pbylicki/robotframework-hub)
+[![Build Status](https://travis-ci.org/Accruent/robotframework-hub.svg?branch=master)](https://travis-ci.org/Accruent/robotframework-hub)
+[![Coverage Status](https://coveralls.io/repos/github/Accruent/robotframework-hub/badge.svg?branch=master)](https://coveralls.io/github/Accruent/robotframework-hub?branch=master)
 
 This is a very early version of a server for the robot framework
 testing framework. The hub uses flask to provide both a RESTful
