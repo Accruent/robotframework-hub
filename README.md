@@ -11,9 +11,7 @@ It's crazy easy to get started. To install and run from a PyPi
 package, do the following:
 
 ```
-    $ pip install robotframework-hub
-    # or if you want to use Postgres as underlying database
-    $ pip install robotframework-hub[postgresql]
+    $ pip install https://github.com/Accruent/robotframework-hub/tarball/master
     $ python -m rfhub
 ```
 
