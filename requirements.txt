@@ -1,5 +1,5 @@
 argh==0.25.0
-certifi==2018.11.29
+certifi==2019.6.16
 chardet==3.0.4
 Flask==0.10.1
 idna==2.8
