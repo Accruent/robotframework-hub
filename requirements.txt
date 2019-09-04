@@ -4,7 +4,7 @@ chardet==3.0.4
 Flask==0.10.1
 idna==2.8
 itsdangerous==1.1.0
-Jinja2==2.7.3
+Jinja2==2.10.1
 MarkupSafe==1.1.1
 pathtools==0.1.2
 PyYAML==5.1
