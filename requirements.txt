@@ -1,4 +1,4 @@
-argh==0.25.0
+argh==0.26.2
 certifi==2019.6.16
 chardet==3.0.4
 Flask==0.10.1
