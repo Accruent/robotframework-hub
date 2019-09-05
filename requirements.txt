@@ -1,7 +1,7 @@
 argh==0.25.0
 certifi==2018.11.29
 chardet==3.0.4
-Flask==1.0
+Flask==0.12.4
 idna==2.8
 itsdangerous==1.1.0
 Jinja2==2.7.3
