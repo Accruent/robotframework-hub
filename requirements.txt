@@ -8,7 +8,7 @@ Jinja2==2.11.2
 MarkupSafe==1.1.1
 pathtools==0.1.2
 PyYAML==5.3.1
-requests==2.23.0
+requests==2.24.0
 robotframework==3.1.2
 robotframework-requests==0.6.6
 robotframework-seleniumlibrary==4.5.0
