@@ -10,7 +10,7 @@ pathtools==0.1.2
 PyYAML==5.3.1
 requests==2.24.0
 robotframework==3.1.2
-robotframework-requests==0.6.6
+robotframework-requests==0.7.1
 robotframework-seleniumlibrary==4.5.0
 selenium==3.141.0
 SQLAlchemy==1.3.19
